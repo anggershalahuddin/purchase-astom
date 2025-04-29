@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('materials', function (Blueprint $table) {
             $table->id();
-            $table->string('cust_code')->unique();
-            $table->string('ai_code')->unique();
-            $table->string('cust_name');
+            $table->string('material_code')->unique();
+            $table->string('ai_code')->nullable();
+            $table->string('material_name');
             $table->string('stock');
             $table->timestamps();
         });
